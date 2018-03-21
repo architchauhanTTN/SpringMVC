@@ -6,7 +6,7 @@
   </head>
   <body>
   <p> This is outside the views</p>
-<form action="savedata">
+<form action="savedata" method="POST">
   <input type="text" name="sid" >
   <input type="text" name="sname">
   <input type="submit">

@@ -52,19 +52,21 @@ public class StudentController {
     return modelAndView;
     }
 
+    @RequestMapping(value = "/savedata" , method = {RequestMethod.POST})
 
-    @RequestMapping("/savedata")
-    @ResponseBody
     public ModelAndView get4(@RequestParam("sid") String id,@RequestParam("sname") String name){
         System.out.println("I was present Here");
         ModelAndView modelAndView=new ModelAndView("studentData");
         modelAndView.addObject("sdata",id+" "+name);
         return modelAndView;
     }
-//    public String archit() {
-//        System.out.println("It is working now");
-//        return  "It should Work now";
-//    }
+    @RequestMapping(value = "/savedata" , method = {RequestMethod.GET})
+    public ModelAndView archit() {
+        System.out.println("It is working now");
+        ModelAndView modelAndView=new ModelAndView("check");
+        modelAndView.addObject("msg","Pokemon");
+        return modelAndView;
+    }
 
 
     @RequestMapping("/studata")
