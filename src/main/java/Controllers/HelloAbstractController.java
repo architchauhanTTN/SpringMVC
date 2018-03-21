@@ -10,6 +10,7 @@ public class HelloAbstractController extends AbstractController {
 
     @Override
     protected ModelAndView handleRequestInternal(HttpServletRequest request, HttpServletResponse response) throws Exception {
+        System.out.println("This is Abstract");
         ModelAndView modelAndView=new ModelAndView("index");
         return modelAndView;
     }

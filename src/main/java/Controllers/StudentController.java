@@ -14,7 +14,10 @@ public class StudentController {
     @RequestMapping("/")
 
     public ModelAndView myDefault(){
+        System.out.println("This is default working");
         ModelAndView modelAndView=new ModelAndView("index");
+//        modelAndView.addObject("msg","hello world from Studentcontroller");
+
         return modelAndView;
     }
 
@@ -28,7 +31,7 @@ public class StudentController {
     @RequestMapping("/getmodel")
     public ModelAndView get(){
         ModelAndView modelAndView=new ModelAndView("index");
-        modelAndView.addObject("msg","hello world from controller");
+        modelAndView.addObject("msg","hello world from Studentcontroller");
         return modelAndView;
     }
 
@@ -51,11 +54,17 @@ public class StudentController {
 
 
     @RequestMapping("/savedata")
-    public ModelAndView get4(@RequestParam("sid") int id,@RequestParam("sname") String name){
+    @ResponseBody
+    public ModelAndView get4(@RequestParam("sid") String id,@RequestParam("sname") String name){
+        System.out.println("I was present Here");
         ModelAndView modelAndView=new ModelAndView("studentData");
         modelAndView.addObject("sdata",id+" "+name);
         return modelAndView;
     }
+//    public String archit() {
+//        System.out.println("It is working now");
+//        return  "It should Work now";
+//    }
 
 
     @RequestMapping("/studata")

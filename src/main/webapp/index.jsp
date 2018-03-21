@@ -11,6 +11,7 @@
     <title>$Title$</title>
   </head>
   <body>
+  <p> This is outside the views</p>
 <form action="savedata">
   <input type="text" name="sid" >
   <input type="text" name="sname">
